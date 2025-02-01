@@ -8,23 +8,23 @@ import { FaShoppingCart } from "react-icons/fa";
 const Navbar = () => {
   return (
     <section>
-      <div className="container mx-auto">
+      <div className="container mx-auto py-4">
         <div className="md:flex justify-between items-center">
           <div>
             <h2 className="text-3xl font-serif">Exclusive</h2>
           </div>
           <div>
-            <ul className="flex flex-col md:flex-row gap-5 md:text-xl font-serif">
-              <li>
+            <ul className="flex flex-col md:flex-row gap-10  font-serif">
+              <li className="hover:underline">
                 <Link>Home</Link>
               </li>
-              <li>
+              <li className="hover:underline">
                 <Link to="/contact">Contact </Link>
               </li>
-              <li>
+              <li className="hover:underline">
                 <Link to="/about">About</Link>
               </li>
-              <li>
+              <li className="hover:underline">
                 <Link to="/sign-up">Sign Up</Link>
               </li>
             </ul>

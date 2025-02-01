@@ -3,6 +3,7 @@ import React from "react";
 const Sign = () => {
   return (
     <div>
+      <h2 className="text-center font-bold text-2xl text-red-500">Sign Up</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Id rem nesciunt
         officiis iusto in corrupti distinctio quia quam tempora magnam impedit
