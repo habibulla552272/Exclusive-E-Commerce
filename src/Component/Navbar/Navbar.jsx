@@ -15,16 +15,16 @@ const Navbar = () => {
           </div>
           <div>
             <ul className="flex flex-col md:flex-row gap-10  font-serif">
-              <li className="hover:underline">
+              <li className="hover:border-b">
                 <Link>Home</Link>
               </li>
-              <li className="hover:underline">
+              <li className="hover:border-b">
                 <Link to="/contact">Contact </Link>
               </li>
-              <li className="hover:underline">
+              <li className="hover:border-b">
                 <Link to="/about">About</Link>
               </li>
-              <li className="hover:underline">
+              <li className="hover:border-b">
                 <Link to="/sign-up">Sign Up</Link>
               </li>
             </ul>
