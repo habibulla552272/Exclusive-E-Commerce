@@ -15,8 +15,8 @@ const Hero = () => {
         slidesToScroll: 1
       };
     return (
-        <section className='border-t md:px-0 px-2 '>
-            <div className=' container mx-auto md:flex justify-between'>
+        <section className=' md:px-0 px-2 container mx-auto '>
+            <div className='  md:flex justify-between'>
                 <div className="md:w-[29%] md:border-r pt-5">
                     <ul className='flex flex-col gap-4'>
                         <li>
