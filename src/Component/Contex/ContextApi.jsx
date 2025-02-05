@@ -5,7 +5,7 @@ const ApiData = createContext();
 
 
 const ContextApi = ({ children }) => {
-  const [data, setData] = useState();
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     axios.get("https://fakestoreapi.in/api/products?limit=150").then((res) => {
