@@ -1,13 +1,20 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App.jsx";
+import { ContextApi } from "./Component/Contex/ContextApi.jsx";
 
+// import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
-createRoot(document.getElementById('root')).render(
+// const queryClient =new QueryClient();
+
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
-  </StrictMode>,
-)
+    {/* <QueryClientProvider client={queryClient}> */}
+    <ContextApi>
+      <App />
+    </ContextApi>
+
+    {/* </QueryClientProvider> */}
+  </StrictMode>
+);
