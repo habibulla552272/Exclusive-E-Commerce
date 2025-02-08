@@ -7,7 +7,9 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <div className='container mx-auto md:flex align-middle  py-5 items-center px-2'>
+        <div className="border-b">
+
+        <div className='container mx-auto md:flex align-middle  py-5 items-center px-2 '>
             <h2 className='font-bold text-2xl  py-2 w-[25%] '>Exclusive</h2>
 
             <div className="md:flex md:flex-row flex flex-col-reverse md:justify-between  w-[75%]">
@@ -33,6 +35,7 @@ const Navbar = () => {
 
             </div>
             </div>
+        </div>
         </div>
     )
 }
