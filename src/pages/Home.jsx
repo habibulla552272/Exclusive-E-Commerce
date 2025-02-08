@@ -5,6 +5,8 @@ import Navbar from '../Component/Navbar/Navbar'
 
 import Hero from '../Component/Hero'
 import BestSeleProduct from '../Component/Best-SeleProduct/BestSeleProduct'
+import Flash from '../Component/home/Flash'
+
 
 
 
@@ -15,6 +17,7 @@ const Home = () => {
   
 
       <Hero/>
+     <Flash/>
       <BestSeleProduct />
 
     </div>

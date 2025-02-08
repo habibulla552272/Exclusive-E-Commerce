@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App.jsx";
 import { ContextApi } from "./Component/Contex/ContextApi.jsx";
 
+
 // import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 // const queryClient =new QueryClient();
