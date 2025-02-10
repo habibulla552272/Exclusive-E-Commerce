@@ -5,6 +5,7 @@ import React from 'react'
 import Hero from '../Component/Hero'
 
 import BestSeleProduct from '../Component/Best-SeleProduct/BestSeleProduct'
+import Flash from '../Component/home/Flash'
 
 
 
@@ -14,7 +15,7 @@ const Home = () => {
     <div> 
 
       <Hero/>
-     
+     <Flash/>
       <BestSeleProduct />
 
 
