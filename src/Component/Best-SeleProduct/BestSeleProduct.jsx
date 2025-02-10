@@ -18,8 +18,8 @@ const BestSeleProduct = () => {
     <section>
       <div className="container mx-auto px-2 md:px-0">
         <div>
-          <div className="flex items-center">
-            <p className="w-4 h-8 bg-red-600"></p>
+          <div className="flex gap-1 md:gap-2 items-center">
+            <p className="w-4 h-8 bg-red-600 rounded-2xl "></p>
             <p>This Month</p>
           </div>
           <div className="flex justify-between items-center">
@@ -37,7 +37,7 @@ const BestSeleProduct = () => {
 
         <div>
           {viewall ? (
-            <div className="md:flex  justify-between mx-auto">
+            <div className="md:flex  justify-between mx-auto ">
               {filterData.map((item, id) => {
                 return (
                   <div
@@ -83,7 +83,7 @@ const BestSeleProduct = () => {
               })}
             </div>
           ) : (
-            <div className="md:flex  justify-between  flex-wrap ">
+            <div className="md:flex  justify-between  flex-wrap  ">
               {data.map((item, id) => {
                 return (
                   <div
