@@ -15,7 +15,7 @@ const Flash = () => {
 
     var settings = {
         dots: false,
-        infinite: true,
+        infinite:true ,
         speed: 1000,
         slidesToShow: 4,
         slidesToScroll: 4,
@@ -48,7 +48,7 @@ const Flash = () => {
         ]
     };
     return (
-        <section className='container mx-auto  pb-16  mt-16 md:px-0 px-2 border'>
+        <section className='container mx-auto  pb-16  mt-16 md:px-0 px-2 '>
             <div className="items-center">
                 <div className="flex text-red-500 gap-3 items-center">
                     <p className=' font-bold w-3 h-8 bg-red-500 rounded-sm'>.</p>

@@ -12,12 +12,12 @@
 
 .slick-arrow:before{
     color: red;
-    font-size: 40px;
+    font-size: 50px;
 }
 
 .slick-prev{
     top: -30px;
-    left: 860px;
+    left: 850px;
 }
 
 .slick-next{
@@ -25,3 +25,4 @@
     right: 100px;
 
 }
+   
