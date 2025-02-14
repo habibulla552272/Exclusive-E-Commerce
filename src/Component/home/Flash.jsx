@@ -93,8 +93,8 @@ const Flash = () => {
 
                                     <button className='bg-[#10f577ef] text-white  px-5 py-2 cursor-pointer absolute -bottom-16  left-1/2 -translate-x-1/2  duration-700 ease-in-out group-hover:bottom-0 w-full '>Add To Cart</button>
                                 </div>
-                                <h4 className='mt-4 font-bold'>HAVIT HV-G92 Gamepad</h4>
-                                <p className='mt-2 font-bold'><span className='text-red-500'>$120</span>  <span className='text-[#8a8a91] ml-4 '>$160</span> </p>
+                                <h4 className='mt-4 font-bold truncate '>{item.title}</h4>
+                                <p className='mt-2 font-bold'><span className='text-red-500'>${item.price} </span>  <span className='text-[#8a8a91] ml-4 line-through'>344 </span> </p>
                                 <p className=' font-bold items-center flex mt-2 '><span className='text-2xl flex text-yellow-400'><IoMdStar /> <IoMdStar /><IoMdStar /><IoMdStar /><IoMdStar /></span> <span className='text-[#8a8a91] ml-5'>(88) </span> </p>
                             </div>
                             </div>
@@ -103,6 +103,11 @@ const Flash = () => {
                     })}
 
                 </Slider>
+                <div className="text-center mt-10">
+
+                <button className='bg-[#DB4444] text-white py-2 px-5 rounded-xl '>View All Products</button>
+                </div>
+
 
             </div>
 

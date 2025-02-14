@@ -5,3 +5,13 @@
   --shadow-custom: 25px 25px 26px -5px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
 }
 
+@extend {
+ --background:{
+  'unick':'#DB4444'
+ }
+  
+}
+
+
+
+
