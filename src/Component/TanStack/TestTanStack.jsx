@@ -10,7 +10,7 @@ const TestTanStack = () => {
 
   // Ensure safe access to products
   const products = Array.isArray(data) ? data : data?.products || [];
-  console.log(products);
+ 
 
   return (
     <div>
