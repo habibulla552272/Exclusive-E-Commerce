@@ -3,13 +3,16 @@ import { FaArrowLeft, FaEye } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import { ApiData } from '../Contex/ContextApi';
 import { CiHeart } from 'react-icons/ci';
+import TestTanStack from '../TanStack/TestTanStack';
+import { useQuery } from '@tanstack/react-query';
+import { tanStackData } from '../TanStack/TanStackQuery';
 
 const ExploreProduct = () => {
 
     const [viewall, setViewAll] = useState(false);
-  const data=useContext(ApiData)
+  const datas=useContext(ApiData)
 
-  let filterData = data.filter((item) => {
+  let filterData = datas.filter((item) => {
     return item.id <= 8;
   });
 
@@ -17,6 +20,26 @@ const ExploreProduct = () => {
     setViewAll(!viewall);
   };
 
+
+//tanStack started here
+
+ const {data}= useQuery({
+    queryKey:['application'],
+    queryFn: tanStackData,
+  })
+
+  const products = Array.isArray(data) ? data : data?.products || []
+  console.log(products);
+  
+// tanStack End here 
+// paginations are started here 
+  const [currentpage,setcurrentpage]= useState(1)
+
+  const lastpage= Math.ceil()
+
+ 
+
+// pagination End Hrre 
 
   
   return (
@@ -40,12 +63,12 @@ const ExploreProduct = () => {
           </div>
     </div>
     <div>
-      <div className="md:flex  justify-between  flex-wrap  ">
-                    { viewall ? data.map((item, id) => {
+      <div className="md:flex  justify-between  flex-wrap  h-96 overflow-y-scroll ">
+                    { viewall ? datas.map((item, id) => {
                       return (
                         <div
                           key={id}
-                          className="md:w-[24%]  w-[80%] mx-auto shadow-custom  my-3 group "
+                          className="md:w-[24%]  w-[80%] mx-auto shadow-custom  my-3 group"
                         >
                           <div className=" relative overflow-hidden bg-gray-100   h-[220px] md:h-[260px]">
                             <img
@@ -143,6 +166,7 @@ const ExploreProduct = () => {
               View All
             </button>
     </div>
+    <TestTanStack />
 
     </div>
   </section>
