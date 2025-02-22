@@ -35,10 +35,9 @@ const ExploreProduct = () => {
   const [perpage,setperpage] = useState(8)
 
   const lastindex= currentpage * perpage;
-  console.log(lastindex);
+  
   
   const firstindex = lastindex - perpage;
-  console.log(firstindex);
   
 
   const perpageProduct= products.slice(firstindex,lastindex)
@@ -54,8 +53,7 @@ const ExploreProduct = () => {
     if(currentpage !== Math.ceil(products.length / perpage)){
 
       setcurrentpage(currentpage + 1)
-      console.log(currentpage);
-      console.log(perpageProduct);
+     
       
       
     }
