@@ -1,25 +1,27 @@
-// import { useQuery } from "@tanstack/react-query";
-// import React from "react";
-// import  { getTodos } from "./TanStackQuery";
+import { useQuery } from '@tanstack/react-query';
+import React from 'react';
+import { tanStackData } from './TanStackQuery';
 
-// const TestTanStack = () => {
-//   const { data,isLoading }= useQuery({
-//     queryKey:['getTodos'],
-//     queryFn: getTodos,
+const TestTanStack = () => {
+  const { data } = useQuery({
+    queryKey: ['aplication'],
+    queryFn: tanStackData,
+  });
 
-//   });
+  // Ensure safe access to products
+  const products = Array.isArray(data) ? data : data?.products || [];
+ 
 
-//   console.log(data,isLoading ,'output data')
+  return (
+    <div>
+      <h2>Hey</h2>
+      {products.length > 0 ? (
+        products.map((product, index) => <p key={index}>{product.name}</p>)
+      ) : (
+        <p>Loading or No products available</p>
+      )}
+    </div>
+  );
+};
 
-//   return (
-//     <div>
-//       <div>
-//         {
-
-//         }
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default TestTanStack;
+export default TestTanStack;
