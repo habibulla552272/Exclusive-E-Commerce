@@ -3,6 +3,7 @@ import { FaArrowRight } from "react-icons/fa";
 import Phone from '../assets/hero-ph.png'
 import Logo from '../assets/home/A-Logo.png'
 import Slider from "react-slick";
+import "./home/home.css"
 
 const Hero = () => {
     const settings = {
@@ -56,8 +57,8 @@ const Hero = () => {
                                         </div>
 
                                         <h1 className='md:text-4xl text-3xl font-bold md:mt-5 mt-2'>Up to 10% <br /><span className='py-4 '>off voucher</span></h1>
-                                        <div className="flex gap-2 items-center md:mt-5 mt-2">
-                                            <button className='hover:border-b pb-1'>Shop Now</button>
+                                        <div className="flex gap-2 items-center md:mt-5 mt-2 cursor-pointer">
+                                            <button className='hover:border-b pb-1 cursor-pointer'>Shop Now</button>
                                             <p><FaArrowRight /></p>
                                         </div>
                                     </div>
@@ -80,8 +81,8 @@ const Hero = () => {
                                         </div>
 
                                         <h1 className='md:text-4xl text-3xl font-bold md:mt-5 mt-2'>Up to 10% <br /><span className='py-4 '>off voucher</span></h1>
-                                        <div className="flex gap-2 items-center md:mt-5 mt-2">
-                                            <button className='hover:border-b pb-1'>Shop Now</button>
+                                        <div className="flex gap-2 items-center md:mt-5 mt-2 cursor-pointer">
+                                            <button className='hover:border-b pb-1 cursor-pointer'>Shop Now</button>
                                             <p><FaArrowRight /></p>
                                         </div>
                                     </div>
@@ -104,8 +105,8 @@ const Hero = () => {
                                         </div>
 
                                         <h1 className='md:text-4xl text-3xl font-bold md:mt-5 mt-2'>Up to 10% <br /><span className='py-4 '>off voucher</span></h1>
-                                        <div className="flex gap-2 items-center md:mt-5 mt-2">
-                                            <button className='hover:border-b pb-1'>Shop Now</button>
+                                        <div className="flex gap-2 items-center md:mt-5 mt-2 cursor-pointer">
+                                            <button className='hover:border-b pb-1 cursor-pointer'>Shop Now</button>
                                             <p><FaArrowRight /></p>
                                         </div>
                                     </div>
