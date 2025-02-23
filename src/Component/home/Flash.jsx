@@ -5,7 +5,7 @@ import { IoEyeOutline } from "react-icons/io5";
 import { IoMdStar } from "react-icons/io";
 import { ApiData } from '../Contex/ContextApi';
 import Slider from "react-slick";
-import  "./Flash.css"
+import  "./home/Flash.css"
 
 
 
