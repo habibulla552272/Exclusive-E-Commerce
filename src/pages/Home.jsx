@@ -9,6 +9,7 @@ import BestSeleProduct from '../Component/Best-SeleProduct/BestSeleProduct'
 import Flash from '../Component/home/Flash'
 
 import ExploreProduct from '../Component/Explore-Our-Product/ExploreProduct'
+import Music from '../Component/home/Music'
 
 
 
@@ -22,6 +23,7 @@ const Home = () => {
      <Flash/>
       <BestSeleProduct />
       <ExploreProduct /> 
+      <Music/>
 
 
     </div>

@@ -13,6 +13,7 @@ const Flash = () => {
     const data = useContext(ApiData);
     let filterFlash = data.filter((item) => item.id >= 92 && item.id <= 105)
 
+
     var settings = {
         dots: false,
         infinite:true ,
