@@ -1,7 +1,7 @@
 
 
 .slick-prev{
-    top: -30px ;
+    top: -30px !important;
     left: 850px !important;
 }
 
