@@ -46,7 +46,7 @@ const Footer = () => {
         <div className="flex flex-col gap-3 ">
             <h3 className="text-xl font-bold " >Download App</h3>
             <p className='mt-2 text-[13px] '>Save $3 with App New User Only</p>
-            <div className="flex  border ">
+            <div className="flex gap-2 ">
                 <img src={Qr} alt="" />
                 <div className="flex flex-col gap-2">                    
                     <img className=' ' src={Pl} alt="" />                                     
