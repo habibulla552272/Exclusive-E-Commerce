@@ -15,15 +15,22 @@ const Navbar = () => {
   // Ensure products is always an array
   const products = Array.isArray(data) ? data : data?.products || [];
 
+
+
+
   // Search state
   const [searchData, setSearchData] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+
 
   // Handle search input
   const searchHandler = (e) => {
     const value = e.target.value;
     setSearchTerm(value);
 
+
+
+    // Filter products based on search term
     if (value !== "") {
       const filteredData = products.filter((item) => {
         return (
@@ -85,9 +92,11 @@ const Navbar = () => {
                 <button aria-label="Wishlist">
                   <AiOutlineHeart />
                 </button>
+                <Link to="/card">
                 <button aria-label="Cart">
                   <AiOutlineShoppingCart />
                 </button>
+                </Link>
               </div>
 
                 {/* Show search results */}
