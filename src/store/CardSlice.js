@@ -19,7 +19,21 @@ const CardSlice =  createSlice({
          }
             
 
+        },
+        removefromCart: (state,action)=>{
+           if(state.cardItem[action.payload].Qont > 1){
+            state.cardItem[action.payload].Qont -=  1;
+            localStorage.setItem('cart',JSON.stringify(state.cardItem));
+            
+           }
+
+        },
+        addformCart:(state,action)=>{
+            state.cardItem[action.payload].Qont += 1;
+            localStorage.setItem('cart',JSON.stringify(state.cardItem));
         }
+
+        
 
 }
 
@@ -27,4 +41,4 @@ const CardSlice =  createSlice({
 
 export default CardSlice.reducer;
 
-export const  {addtoCard}= CardSlice.actions;
+export const  {addtoCard,removefromCart,addformCart}= CardSlice.actions;

@@ -120,7 +120,7 @@ const addtoCardHandel =(cardData)=>{
                               </p>
                             </div>
                             <div className=' absolute w-full  text-center -bottom-14 group-hover:bottom-0 duration-700 ease-in-out rounded-2xl'>
-                              <button onClick={()=> addtoCardHandel(item)} className='bg-black text-white text-xs md:text-xl py-2 font-mono'>Add to Card</button>
+                              <button onClick={()=> addtoCardHandel(item)} className='bg-black w-full rounded-xl text-white text-xs md:text-xl py-2 font-mono'>Add to Card</button>
                             </div>
                           </div>
       
