@@ -6,6 +6,8 @@ import { CiHeart } from 'react-icons/ci';
 import TestTanStack from '../TanStack/TestTanStack';
 import { useQuery } from '@tanstack/react-query';
 import { tanStackData } from '../TanStack/TanStackQuery';
+import { useDispatch } from 'react-redux';
+import { addtoCard } from '../../store/CardSlice';
 
 const ExploreProduct = () => {
 
@@ -59,10 +61,19 @@ const ExploreProduct = () => {
     }
   }
 
-
- 
-
 // pagination End Hrre 
+
+// add to card 
+
+const dispatch= useDispatch()
+
+const addtoCardHandel =(cardData)=>{
+  dispatch(addtoCard({...cardData,Qont:1}))
+}
+
+// add to  card end
+
+
 
   
   return (
@@ -109,7 +120,7 @@ const ExploreProduct = () => {
                               </p>
                             </div>
                             <div className=' absolute w-full  text-center -bottom-14 group-hover:bottom-0 duration-700 ease-in-out rounded-2xl'>
-                              <h4 className='bg-black text-white text-xs md:text-xl py-2 font-mono'>Add to Card</h4>
+                              <button onClick={()=> addtoCardHandel(item)} className='bg-black text-white text-xs md:text-xl py-2 font-mono'>Add to Card</button>
                             </div>
                           </div>
       
