@@ -82,8 +82,11 @@ const Navbar = () => {
 
               {/* Icons */}
               <div className="flex py-2 gap-5 text-[22px]">
+
                 <button aria-label="Wishlist">
+                  <Link to="/wishlist" >
                   <AiOutlineHeart />
+                  </Link>
                 </button>
                 <button aria-label="Cart">
                   <AiOutlineShoppingCart />
