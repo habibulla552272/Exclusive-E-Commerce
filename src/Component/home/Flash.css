@@ -17,12 +17,11 @@
 
 .slick-prev{
     top: -30px !important;
-    left: 850px !important;
+    left: 500px !important;
 }
 
 .slick-next{
     top: -30px !important;
-    right: 100px !important;
-
+    left: 550px !important;
 }
    

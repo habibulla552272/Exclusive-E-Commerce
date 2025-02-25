@@ -11,7 +11,8 @@ import  "./Flash.css"
 
 const Flash = () => {
     const data = useContext(ApiData);
-    let filterFlash = data.filter((item) => item.id >= 92 && item.id <= 105)
+    let filterFlash = data.filter((item) => item.id >= 92 && item.id <= 120)
+
 
     var settings = {
         dots: false,
@@ -81,7 +82,7 @@ const Flash = () => {
 
                             <div className="">
 
-                            <div className="mt-10  md:w-[250px] w-full  group  px-2">
+                            <div className="mt-10  md:w-[250px] w-full  group  px-2 ">
                                 <div className="bg-[#Ffff] p-4 rounded-md shadow-2xl  h-[300px] text-center relative overflow-hidden ">
                                     <p className='border w-[50px] bg-red-500 text-white rounded-sm ml-2'>-40%</p>
                                     <img className='w-[70%] ml-5 relative md:top-10 ' src={item.image} alt="" />
@@ -105,7 +106,7 @@ const Flash = () => {
                 </Slider>
                 <div className="text-center mt-10">
 
-                <button className='bg-[#DB4444] text-white py-2 px-5 rounded-xl '>View All Products</button>
+                <button className='bg-[#DB4444] text-white py-2 px-5 rounded-xl hover:bg-black'>View All Products</button>
                 </div>
 
 

@@ -3,7 +3,8 @@ import { FaArrowRight } from "react-icons/fa";
 import Phone from '../assets/hero-ph.png'
 import Logo from '../assets/home/A-Logo.png'
 import Slider from "react-slick";
-import "./home/home.css"
+import "./home/Hero.css"
+
 
 const Hero = () => {
     const settings = {

@@ -91,7 +91,9 @@ const Navbar = () => {
               <div className="flex py-2 gap-5 text-[22px]">
                 <Link to='/details'>
                 <button aria-label="Wishlist">
+                  <Link to="/wishlist" >
                   <AiOutlineHeart />
+                  </Link>
                 </button>
                 
                 </Link>
