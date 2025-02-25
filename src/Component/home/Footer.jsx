@@ -6,6 +6,7 @@ import { RiFacebookFill } from "react-icons/ri";
 import { LuTwitter } from "react-icons/lu";
 import { FaInstagram } from "react-icons/fa";
 import { TiSocialLinkedin } from "react-icons/ti";
+import { TiArrowRightThick } from "react-icons/ti";
 
 const Footer = () => {
   return (
@@ -15,7 +16,10 @@ const Footer = () => {
             <h2 className="text-2xl font-bold" >Exclusive</h2>
             <h3 className='text-xl font-bold mt-2'>Subscribe</h3>
             <p>Get 10% off your first order</p>
-            <input type="text" placeholder='Enter your email' />
+            <div className="flex border items-center w-[160px] p-2">
+            <input className=' w-[130px] ' type="text" placeholder='Enter your email' />
+            <p><TiArrowRightThick /></p>
+            </div>
         </div>
 
         <div className="flex flex-col gap-3 ">

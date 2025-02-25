@@ -22,8 +22,8 @@ const Home = () => {
       <Hero/>
      <Flash/>
       <BestSeleProduct />
-      <ExploreProduct /> 
       <Music/>
+      <ExploreProduct /> 
 
 
     </div>
