@@ -80,8 +80,8 @@ const addtoCardHandel =(cardData)=>{
   <section>
 
     <div className='container mx-auto px-2 md:px-0'>
-    <div>
-          <div className="flex gap-1 md:gap-2 items-center">
+    <div className='my-2'>
+          <div className="flex gap-1 md:gap-2 items-center my-3">
             <p className="w-4 h-8 bg-red-600 rounded-2xl"></p>
             <p >This Month</p>
           </div>
@@ -89,7 +89,7 @@ const addtoCardHandel =(cardData)=>{
             <h2 className="text-sl md:text-2xl font-sans font-semibold className='py-1'">
               Explore Our  Products
             </h2>
-           <div className='flex gap-3'>
+           <div className='flex gap-3 pr-5'>
             <p onClick={handelLeft} className='rounded-full w-8 h-8 flex justify-center items-center hover:bg-gray-300'><FaArrowLeft   /></p>
            <p onClick={handelRight} className='rounded-full w-8 h-8 flex justify-center items-center hover:bg-gray-300'> <FaArrowRight /></p>
             
@@ -97,7 +97,7 @@ const addtoCardHandel =(cardData)=>{
           </div>
     </div>
     <div>
-      <div className="md:flex  justify-between  flex-wrap  h-96 overflow-y-scroll ">
+      <div className="md:flex  justify-between  flex-wrap   ">
                     { perpageProduct.map((item, id) => {
                       return (
                         <div
