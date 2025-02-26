@@ -11,6 +11,7 @@ import Flash from '../Component/home/Flash'
 import ExploreProduct from '../Component/Explore-Our-Product/ExploreProduct'
 import Music from '../Component/home/Music'
 import NewArrival from '../Component/home/New Arivel/NewArrival'
+import HomeLastSection from '../Component/home/HomeLastSection/HomeLastSection'
 
 
 
@@ -27,6 +28,7 @@ const Home = () => {
       <ExploreProduct /> 
       <ExploreProduct />
       <NewArrival /> 
+      <HomeLastSection />
 
 
 
