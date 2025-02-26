@@ -10,6 +10,7 @@ import Flash from '../Component/home/Flash'
 
 import ExploreProduct from '../Component/Explore-Our-Product/ExploreProduct'
 import NewArrival from '../Component/home/New Arivel/NewArrival'
+import HomeLastSection from '../Component/home/HomeLastSection/HomeLastSection'
 
 
 
@@ -24,6 +25,7 @@ const Home = () => {
       <BestSeleProduct />
       <ExploreProduct />
       <NewArrival /> 
+      <HomeLastSection />
 
 
     </div>
