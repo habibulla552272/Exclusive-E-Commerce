@@ -15,6 +15,7 @@ import About from './pages/About';
 import Sign from './pages/Sign-Up';
 import Card from "./pages/Card";
 import Details from "./pages/Details";
+import Checkout from "./pages/Checkout";
 
 function App() {
   let myRouter = createBrowserRouter(
@@ -26,6 +27,8 @@ function App() {
         <Route path="/sign-up" element={<Sign />} />
         <Route path="/card" element={<Card />} />
         <Route path="/itemdetails/:id" element={<Details />} />
+        <Route path="/checkout" element={<Checkout />} />
+
 
 
       </Route>
