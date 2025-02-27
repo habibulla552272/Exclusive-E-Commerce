@@ -33,6 +33,9 @@ const CartSection1 = () => {
       })
      // all total cost end
 
+     // Handel Checkout page
+
+
   return (
     <section>
         <div className='container mx-auto'>
@@ -125,9 +128,9 @@ const CartSection1 = () => {
                         <p>Total</p>
                         <p>{totalsum}$</p>
                     </div>
-                    <button className='px-3 py-2  rounded-xl bg-rose-500  hover:bg-green-300 hover:text-white'>
+                    <button  className='px-3 py-2  rounded-xl bg-rose-500  hover:bg-green-300 hover:text-white'>
 
-                        Proceed to Checkout
+                        <Link to='/checkout'>Proceed to Checkout</Link>
                         
                     </button>
                 </div>
