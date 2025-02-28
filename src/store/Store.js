@@ -5,10 +5,15 @@ import wishSlice from '../store/wishSlice'
 
 
 
+
 const store = configureStore({
     reducer:{
         cardSlice:  CardSlice,
+
         wishSlice: wishSlice,
+=======
+        
+
 
     }
 })
