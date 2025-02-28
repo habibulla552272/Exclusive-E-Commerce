@@ -8,7 +8,11 @@ import { useQuery } from '@tanstack/react-query';
 import { tanStackData } from '../TanStack/TanStackQuery';
 import { useDispatch } from 'react-redux';
 import { addtoCard } from '../../store/CardSlice';
+
+import { addToWish } from '../../store/wishSlice';
+
 import { Link } from 'react-router-dom';
+
 
 const ExploreProduct = () => {
 
@@ -64,6 +68,11 @@ const ExploreProduct = () => {
 
 // pagination End Hrre 
 
+  // Add To Wish Product...................................................//
+  const hendelAddToWishItem = (product) => {
+    dispatch(addToWish({...product,Qont: 1}))
+  }
+
 // add to card 
 
 const dispatch= useDispatch()
@@ -112,7 +121,7 @@ const addtoCardHandel =(cardData)=>{
                               alt="image"
                             />
                             <div className=" absolute flex flex-col right-3 gap-3 -bottom-16 group-hover:bottom-24 duration-700  ease-in-out ">
-                              <p className="text-2xl ">
+                              <p onClick={()=> hendelAddToWishItem (item)} className="text-2xl cursor-pointer ">
                                 <CiHeart />
                               </p>
       
