@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
+import bkash from './CheckoutImage/Bkash.png'
+import  visa from "./CheckoutImage/Visa.png"
+import mastercard from './CheckoutImage/Mastercard.png'
+import noagod from './CheckoutImage/image 33.png'
+import { MdOutlineRadioButtonUnchecked } from "react-icons/md";
+import { MdOutlineRadioButtonChecked } from "react-icons/md";
+
 
 const CheckoutSection1 = () => {
   const data= useSelector(state => state.cardSlice.cardItem)
-  
+  const [firstCheck,setFirstCheck] = useState(false)
+  const [lastCheck,setLastCheck] = useState(false)
+
+    
    // all subtotal 
    let sum = 0 ;
    data.forEach(item=>{
@@ -21,10 +31,33 @@ const CheckoutSection1 = () => {
    })
   // all total cost end
 
+  //chek unchek
+  const firstCheckHandel =()=>{
+     if(firstCheck){
+      setFirstCheck(false)
+     }else{
+      setFirstCheck(true)
+     }
+
+     setLastCheck(false)
+  }
+  const lastCheckHandel =()=>{
+    if(lastCheck == true){
+      setLastCheck(false)
+    }else{
+      setLastCheck(true)
+   
+      
+    }
+    setFirstCheck(false)
+    
+  }
+
   return (
     <section>
         <div className='container mx-auto px-5 md:px-0'>
-            <div>
+          <div className=' md:flex justify-between'>
+            <div className='md:w-[46%]'>
                 <h2 className='text-2xl font-bold  font-sans'>Billing Details</h2>
 
                 <form action="chekout">
@@ -79,7 +112,7 @@ const CheckoutSection1 = () => {
                 </form>
 
             </div>
-            <div>
+            <div className='md:w-[42%]'>
               <div>
                 {data.map(item=>{
                   return(
@@ -107,7 +140,51 @@ const CheckoutSection1 = () => {
                 <p>${totalsum}</p>
               </div>
 
+               <div className=' px-3 md:px-0 my-4'>
+              <div className='flex justify-between '>
+                <div className='flex gap-3 items-center'>
+                   <button onClick={firstCheckHandel}>
+                       {firstCheck ? <MdOutlineRadioButtonChecked /> : <MdOutlineRadioButtonUnchecked />}
+                   </button>
+                   <p className='text-xl font-thin font-semibold'>Bank</p>
+                
+                </div>
+                <div className='flex gap-2'>
+                  <button><img src={bkash} alt="" /></button>
+                  <button>
+                    <img src={visa} alt="" />
+                  </button>
+                  <button>
+                    <img src={mastercard} alt="" />
+                  </button>
+                  <button>
+                    <img src={noagod} alt="" />
+                  </button>
+                </div>
+              </div>
+              <div className='flex gap-3 items-center py-3'>
+                <button onClick={lastCheckHandel}>
+                {lastCheck ? <MdOutlineRadioButtonChecked /> : <MdOutlineRadioButtonUnchecked />}
+                   
+                </button>
+                <p className='text-xl font-thin font-semibold'>Cash on Delivery</p>
+              </div>
+              <div className='flex justify-between'>
+                <div className='border-2 border-gray-400'>
+                   <input className='px-3 py-2 outline-none' type="text" name="" id="" placeholder='coupon Code' />
+                </div>
+
+                <div>
+                  <button className=' px-2 py-2 bg-rose-500 rounded-xl'>Apply Coupon</button>
+                </div>
+              </div>
+              <div className='my-4'>
+                <button className=' px-2 py-2 bg-rose-500 rounded-xl'>Place Order</button>
+              </div>
+               </div>
             </div>
+
+          </div>
 
         </div>
     </section>
