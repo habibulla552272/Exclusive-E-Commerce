@@ -1,21 +1,30 @@
 import React, { useContext } from 'react'
-import Bg from './wish-img/bag.png'
+
 import { IoCartOutline } from "react-icons/io5";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { ApiData } from '../Contex/ContextApi';
+import { useSelector } from 'react-redux';
 
 const Wishlist4 = () => {
-    const mainApi = useContext(ApiData)
+    const mainApiData = useContext(ApiData)
+    // add to wish item....................................
+    let wishData = useSelector((state)=> state.wishSlice.wishItemSlice
+)
+    console.log(wishData);
+    
+   
+    
+    // let filterWish = mainApi.filter((item) => item.id >= 40 && item.id <= 43)
+   
 
-    let filterWish = mainApi.filter((item) => item.id >= 40 && item.id <= 43)
     return (
         <section className='container mx-auto mt-14'>
             <div className="flex justify-between">
                 <p>Wishlist (4) </p>
                 <button className='border py-2 px-5 rounded-sm '>Move All To Bag</button>
             </div>
-            <div className="flex justify-between">
-                {filterWish.map((item) => (
+           <div className="flex flex-wrap justify-between">
+                {wishData.map((item) => (
 
                     <div className=" w-[230px]  mt-7 relative overflow-hidden group  ">
                         <div className="  p-3 rounded-md border-2 ">
@@ -34,9 +43,9 @@ const Wishlist4 = () => {
                     </div>
                 ))
 
-
                 }
-            </div>
+            </div>  
+
         </section>
 
 

@@ -11,7 +11,9 @@ import { TiArrowRightThick } from "react-icons/ti";
 const Footer = () => {
   return (
     
-      <section className='flex justify-between p-20 bg-black text-white mt-10'>
+      <section className=' pt-20 px-20 pb-8 bg-black text-white mt-10 '>
+        <div className="md:flex justify-between">
+
         <div className="flex flex-col gap-3 ">
             <h2 className="text-2xl font-bold" >Exclusive</h2>
             <h3 className='text-xl font-bold mt-2'>Subscribe</h3>
@@ -64,7 +66,8 @@ const Footer = () => {
                 <p><TiSocialLinkedin /></p>
             </div>
         </div>
-        
+        </div>
+        <p className='text-center mt-16 text-[#c6c4cb55] '>||-two best friend 'Anas & Habibull--</p>
 
       </section>
     
