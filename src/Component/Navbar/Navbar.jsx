@@ -4,6 +4,8 @@ import { AiOutlineShoppingCart, AiOutlineHeart } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { tanStackData } from "../TanStack/TanStackQuery";
+import { MdMenu } from "react-icons/md";
+import { RxCross2 } from "react-icons/rx";
 
 const Navbar = () => {
   // Fetching data inside the component
@@ -44,18 +46,27 @@ const Navbar = () => {
       setSearchData([]);
     }
   };
+  // Navbar menu & crus respons ......................................
+  let [menuShow, setMenuShow] = useState(false)
+
+  const hendelMenuBar = () => {
+    setMenuShow(!menuShow)       
+  }
+  
+  
 
   return (
     <section >
       <div className="border-b ">
-        <div className="container mx-auto md:flex items-center py-5 px-2">
+        <div className="container mx-auto md:flex items-center py-5 px-2 ">
           {/* Logo */}
           <h2 className="font-bold text-2xl w-[25%]">Exclusive</h2>
 
           {/* Navigation & Search */}
-          <div className="md:flex md:flex-row flex flex-col-reverse md:justify-between w-[75%]">
+          <div className="md:flex md:flex-row flex flex-col-reverse md:justify-between w-[75%] ">
+
             {/* Navigation Links */}
-            <ul className="md:flex gap-10 py-2">
+            <ul className={ ` md:flex md:gap-10  py-2 md:static   ${menuShow ? '  ' : ' top-[100px] -left-[200px] absolute  '}`}>
               <li className="md:hover:border-b">
                 <Link to="/">Home</Link>
               </li>
@@ -71,7 +82,7 @@ const Navbar = () => {
             </ul>
 
             {/* Search & Icons */}
-            <div className="relative flex text-center gap-4">
+            <div className="relative flex text-center gap-4 items-center">
               {/* Search Input */}
               <div className="flex px-1 rounded-sm w-[230px] py-2 justify-between bg-[#F5F5F5] relative">
                 <input
@@ -102,6 +113,10 @@ const Navbar = () => {
                   <AiOutlineShoppingCart />
                 </button>
                 </Link>
+              </div>
+
+              <div className="">
+                <p onClick={ hendelMenuBar} className="md:hidden text-2xl"> {menuShow === true ? <RxCross2 />: <MdMenu />} </p>
               </div>
 
                 {/* Show search results */}
