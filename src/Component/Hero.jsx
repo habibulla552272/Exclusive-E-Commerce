@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaArrowRight } from "react-icons/fa";
 import Phone from '../assets/hero-ph.png'
 import Logo from '../assets/home/A-Logo.png'
 import Slider from "react-slick";
 import "./home/Hero.css"
+import { IoMdArrowDropright } from "react-icons/io";
+import { IoMdArrowDropdown } from "react-icons/io";
 
 
 const Hero = () => {
@@ -14,14 +16,29 @@ const Hero = () => {
         slidesToShow: 1,
         slidesToScroll: 1
     };
+
+    // Category items,.......................//
+    let [category, setCategory] = useState(false)
+    const hendelCategoryItems = ()=> {
+        setCategory(!category)
+        
+    }
+
     return (
         <section className='border-t md:px-0 px-2 '>
             <div className=' container mx-auto md:flex justify-between md:flex-row flex flex-col-reverse'>
 
-                <div className="md:w-[29%] md:border-r pt-5 md:mt-0 mt-5">
-                    <ul className='flex flex-col gap-4'>
+                <div className="md:w-[29%] md:border-r pt-5 md:mt-0 mt-5 ">
+                    <div className="flex gap-5 items-center">
+                         <p className=''>Category Items </p>
+                         
+
+                        <p onClick={hendelCategoryItems} className='text-2xl'>{category === true ? <IoMdArrowDropdown /> : <IoMdArrowDropright />} </p>
+                        
+                    </div>
+                    <ul className={`flex flex-col gap-4 mt-4 ${category ? '' : 'top-[100px] -left-[200px] absolute ' }`}>
                         <li>
-                            <select className='items-center' name="Wom" id="Wom">
+                            <select className='items-center outline-none' name="Wom" id="Wom">
                                 <option value="woman">Woman’s Fashion</option>
                                 <option value="woman">Pent Items</option>
                                 <option value="woman">Lushon Items</option>
@@ -29,7 +46,7 @@ const Hero = () => {
 
                         </li>
                         <li>
-                            <select className='items-center' name="mens" id="mens">
+                            <select className='items-center outline-none' name="mens" id="mens">
                                 <option value="woman">Men’s Fashion</option>
                                 <option value="woman">Pent Items</option>
                                 <option value="woman">Shart Items</option>
@@ -43,6 +60,7 @@ const Hero = () => {
                         <li>Groceries & Pets</li>
                         <li>Health & Beauty</li>
                     </ul>
+
                 </div>
 
                 <div className="md:w-[68%] ">
