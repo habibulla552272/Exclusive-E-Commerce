@@ -116,7 +116,7 @@ const CheckoutSection1 = () => {
               <div>
                 {data.map(item=>{
                   return(
-                    <div className='flex gap-3 justify-between items-center bg-gray-50 py-2 px-3 md:px-0 my-3' key={item.id}> 
+                    <div className='flex gap-3 justify-between items-center bg-gray-50 py-2 px-3 md:px-0 my-3 shadow-2xl' key={item.id}> 
                       <img className='w-[30%] ' src={item.image} alt="image" />
                       <p className='text-xl font-thin font-serif'>{item.brand}</p>
                       <p className='text-xl font-semibold'>${item.price}</p>
