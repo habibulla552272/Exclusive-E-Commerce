@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 import { ApiData } from "../Contex/ContextApi";
 import { CiHeart } from "react-icons/ci";
 import { FaEye } from "react-icons/fa";
+import { useDispatch } from "react-redux";
+import { addToWish } from "../../store/wishSlice";
 
 const BestSeleProduct = () => {
   const data = useContext(ApiData);
@@ -13,6 +15,12 @@ const BestSeleProduct = () => {
   const viewallData = () => {
     setViewAll(!viewall);
   };
+
+  // Add To Wishitem..............................
+  const dispatch =useDispatch()
+  const hendelAddToWish= (wishData) => {
+    dispatch(addToWish({...wishData,Qont: 1}))
+  }
 
   return (
     <section>
@@ -51,7 +59,7 @@ const BestSeleProduct = () => {
                         alt="image"
                       />
                       <div className=" absolute flex flex-col right-3 gap-3 -bottom-16 group-hover:bottom-24 duration-700  ease-in-out ">
-                        <p className="text-2xl ">
+                        <p onClick={()=> hendelAddToWish(item) } className="text-2xl cursor-pointer ">
                           <CiHeart />
                         </p>
 
@@ -97,7 +105,7 @@ const BestSeleProduct = () => {
                         alt="image"
                       />
                       <div className=" absolute flex flex-col right-3 gap-3 -bottom-16 group-hover:bottom-24 duration-700  ease-in-out ">
-                        <p className="text-2xl ">
+                        <p onClick={()=> hendelAddToWish(item) } className="text-2xl cursor-pointer">
                           <CiHeart />
                         </p>
 

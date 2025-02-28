@@ -16,9 +16,14 @@ const wishSlice = createSlice({
                 state.wishItemSlice[findData]. Qont += 1;
                 localStorage.setItem('wish', JSON.stringify(state.wishItemSlice))
             }
+        },
+        deleteWishItem:(state, action)=>{
+            state.wishItemSlice.splice(action.payload, 1);
+            localStorage.setItem('wish', JSON.stringify(state.wishItemSlice))
+
         }
     }
 })
 
 export default wishSlice.reducer;
-export const {addToWish}= wishSlice.actions;
+export const {addToWish, deleteWishItem}= wishSlice.actions;

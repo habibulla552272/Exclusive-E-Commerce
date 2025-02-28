@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     
       <section className=' pt-20 px-20 pb-8 bg-black text-white mt-10 '>
-        <div className="md:flex justify-between">
+        <div className="md:flex  justify-between">
 
         <div className="flex flex-col gap-3 ">
             <h2 className="text-2xl font-bold" >Exclusive</h2>
@@ -25,14 +25,14 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col gap-3 ">
-            <h3 className="text-xl font-bold " >Support</h3>
+            <h3 className="text-xl font-bold md:mt-0 mt-5 " >Support</h3>
             <p className='mt-2'>111 Bijoy sarani, Dhaka,<br />  DH 1515, Bangladesh.</p>
             <p>exclusive@gmail.com</p>
             <p>+88015-80724723</p>
         </div>
 
         <div className="flex flex-col gap-3 ">
-            <h3 className="text-xl font-bold " >Account</h3>
+            <h3 className="text-xl font-bold md:mt-0 mt-5 " >Account</h3>
             <p className='mt-2'>My Account</p>
             <p>Login / Register</p>
             <p>Cart</p>
@@ -42,7 +42,7 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col gap-3 ">
-            <h3 className="text-xl font-bold " >Quick Link</h3>
+            <h3 className="text-xl font-bold md:mt-0 mt-5 " >Quick Link</h3>
             <p className='mt-2'>Privacy Policy</p>
             <p>Terms Of Use</p>
             <p>FAQ</p>
@@ -50,7 +50,7 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col gap-3 ">
-            <h3 className="text-xl font-bold " >Download App</h3>
+            <h3 className="text-xl font-bold md:mt-0 mt-5 " >Download App</h3>
             <p className='mt-2 text-[13px] '>Save $3 with App New User Only</p>
             <div className="flex gap-2 ">
                 <img src={Qr} alt="" />
