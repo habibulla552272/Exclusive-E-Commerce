@@ -11,7 +11,7 @@ const store = configureStore({
         cardSlice:  CardSlice,
 
         wishSlice: wishSlice,
-=======
+
         
 
 
