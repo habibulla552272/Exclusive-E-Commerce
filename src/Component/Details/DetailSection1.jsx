@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import image1 from './DetailsImage/Frame 895.png' 
 import image2 from './DetailsImage/Frame 896.png'  
 import image3 from './DetailsImage/Frame 894.png'  
@@ -11,10 +11,39 @@ import { FaCircle } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
 import { GrDeliver } from "react-icons/gr";
 import { LuRefreshCcw } from "react-icons/lu";
+import { useQuery } from '@tanstack/react-query'
+import { tanStackData } from '../TanStack/TanStackQuery'
+import { IoEyeOutline, IoHeartOutline } from 'react-icons/io5'
+import { IoMdStar } from 'react-icons/io'
 
 
 
 const DetailSection1 = () => {
+    
+    const productDetailsdata =useParams();
+    
+
+    //data Featch
+
+   const {data}= useQuery({
+        queryKey: 'aplication',
+        queryFn: tanStackData,
+
+    })
+    
+
+    const products = Array.isArray(data) ? data : data?.products || []
+   
+   //data filter 
+   
+
+    const filterData = products.filter(item=>{
+        return item.id == productDetailsdata.id
+    })
+    
+    console.log(filterData);
+    
+    
   return (
     <section>
         <div className='container mx-auto'>
@@ -30,20 +59,24 @@ const DetailSection1 = () => {
             </div>
 
             {/* middle div  */}
-            <div className='md:flex md:gap-5'>
-                <div className='flex gap-3'>
-                    <div className='flex flex-col gap-2'>
-                        <img  src={image1} alt='havic-hv-g-92-gamepad' className=''/> 
-                        <img src={image2} alt='havic-hv-g-92-gamepad' className=''/> 
 
-                    </div>
-                    <div>
-                        <img src={image3} alt="img" />
-                    </div>
-                </div>
-                <div>
+            {filterData.map(item=>{
+                return(
 
-                    <h2 className='text-2xl font-extrabold font-mono '>sub tetails</h2>
+                     <div key={item.id} className='md:flex md:gap-5'>
+                            <div className='flex gap-3'>
+                             <div className='flex flex-col gap-2'>
+                            <img  src={image1} alt='havic-hv-g-92-gamepad' className=''/> 
+                              <img src={image2} alt='havic-hv-g-92-gamepad' className=''/> 
+
+                             </div>
+                              <div>
+                                    <img src={item.image} alt="img" />
+                                </div>
+                              </div>
+                      <div>
+
+                    <h2 className='text-2xl font-extrabold font-mono '>{item.title}</h2>
                     <div className='flex  items-center py-2'>
                         <div className='flex gap-1 text-yellow-200'>
                                 <FaStar />
@@ -56,7 +89,7 @@ const DetailSection1 = () => {
                         <p className='text-green-400 border-l-2 px-4'>In Stock</p>
                     </div>
                     <div className='border-b-2 pb-3 py-2 border-gray-200'>
-                        <p>$49</p>
+                        <p>${item.price}</p>
                         <p className='py-2'>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur eligendi iusto illum.
                         </p>
@@ -128,8 +161,84 @@ const DetailSection1 = () => {
 
 
 
+                    </div>
+
+                )
+            })
+
+            }
+
+            {/* //botto  */}
+            <div className='flex flex-col md:flex-row  gap-4 '>
+            <div className="mt-10  md:w-[250px] w-full  group  px-2 shadow-xl ">
+                     <div className="bg-[#Ffff] p-4 rounded-md shadow-2xl  h-[300px] text-center relative overflow-hidden ">
+                                    <p className='border w-[50px] bg-red-500 text-white rounded-sm ml-2'>-40%</p>
+                                    <img className='w-[70%] mx-auto relative md:top-10 ' src={image3} alt="" />
+
+                                    <div className="md:ml-46 ml-[250px] relative md:bottom-40 bottom-[200px] flex flex-col gap-3 ">
+                                        <p className='text-[23px] cursor-pointer    '><IoHeartOutline className='   ' /></p>
+                                        <p className='text-[23px] cursor-pointer    '><IoEyeOutline className='   ' /></p>
+                                    </div>
+
+                                    <button className='bg-[#10f577ef] text-white  px-5 py-2 cursor-pointer absolute -bottom-16  left-1/2 -translate-x-1/2  duration-700 ease-in-out group-hover:bottom-0 w-full '>Add To Cart</button>
+                    </div>
+                    <h4 className='mt-4 font-bold truncate '></h4>
+                    <p className='mt-2 font-bold'><span className='text-red-500'>$33 </span>  <span className='text-[#8a8a91] ml-4 line-through'>344 </span> </p>
+                     <p className=' font-bold items-center flex mt-2 '><span className='text-2xl flex text-yellow-400'><IoMdStar /> <IoMdStar /><IoMdStar /><IoMdStar /><IoMdStar /></span> <span className='text-[#8a8a91] ml-5'>(88) </span> </p>
+            </div>
+            <div className="mt-10  md:w-[250px] w-full  group  px-2  shadow-2xl">
+                     <div className="bg-[#Ffff] p-4 rounded-md shadow-2xl  h-[300px] text-center relative overflow-hidden ">
+                                    <p className='border w-[50px] bg-red-500 text-white rounded-sm ml-2'>-40%</p>
+                                    <img className='w-[70%] mx-auto relative md:top-10 relative md:top-10 ' src={image3} alt="" />
+
+                                    <div className="md:ml-46 ml-[250px] relative md:bottom-40 bottom-[200px] flex flex-col gap-3 ">
+                                        <p className='text-[23px] cursor-pointer    '><IoHeartOutline className='   ' /></p>
+                                        <p className='text-[23px] cursor-pointer    '><IoEyeOutline className='   ' /></p>
+                                    </div>
+
+                                    <button className='bg-[#10f577ef] text-white  px-5 py-2 cursor-pointer absolute -bottom-16  left-1/2 -translate-x-1/2  duration-700 ease-in-out group-hover:bottom-0 w-full '>Add To Cart</button>
+                    </div>
+                    <h4 className='mt-4 font-bold truncate '></h4>
+                    <p className='mt-2 font-bold'><span className='text-red-500'>$33 </span>  <span className='text-[#8a8a91] ml-4 line-through'>344 </span> </p>
+                     <p className=' font-bold items-center flex mt-2 '><span className='text-2xl flex text-yellow-400'><IoMdStar /> <IoMdStar /><IoMdStar /><IoMdStar /><IoMdStar /></span> <span className='text-[#8a8a91] ml-5'>(88) </span> </p>
+            </div>
+            <div className="mt-10  md:w-[250px] w-full  group  px-2  shadow-2xl">
+                     <div className="bg-[#Ffff] p-4 rounded-md shadow-2xl  h-[300px] text-center relative overflow-hidden ">
+                                    <p className='border w-[50px] bg-red-500 text-white rounded-sm ml-2'>-40%</p>
+                                    <img className='w-[70%] mx-auto relative md:top-10 relative md:top-10 ' src={image3} alt="" />
+
+                                    <div className="md:ml-46 ml-[250px] relative md:bottom-40 bottom-[200px] flex flex-col gap-3 ">
+                                        <p className='text-[23px] cursor-pointer    '><IoHeartOutline className='   ' /></p>
+                                        <p className='text-[23px] cursor-pointer    '><IoEyeOutline className='   ' /></p>
+                                    </div>
+
+                                    <button className='bg-[#10f577ef] text-white  px-5 py-2 cursor-pointer absolute -bottom-16  left-1/2 -translate-x-1/2  duration-700 ease-in-out group-hover:bottom-0 w-full '>Add To Cart</button>
+                    </div>
+                    <h4 className='mt-4 font-bold truncate '></h4>
+                    <p className='mt-2 font-bold'><span className='text-red-500'>$33 </span>  <span className='text-[#8a8a91] ml-4 line-through'>344 </span> </p>
+                     <p className=' font-bold items-center flex mt-2 '><span className='text-2xl flex text-yellow-400'><IoMdStar /> <IoMdStar /><IoMdStar /><IoMdStar /><IoMdStar /></span> <span className='text-[#8a8a91] ml-5'>(88) </span> </p>
+            </div>
+            <div className="mt-10  md:w-[250px] w-full  group  px-2 shadow-2xl">
+                     <div className="bg-[#Ffff] p-4 rounded-md shadow-2xl  h-[300px] text-center relative overflow-hidden ">
+                                    <p className='border w-[50px] bg-red-500 text-white rounded-sm ml-2'>-40%</p>
+                                    <img className='w-[70%] mx-auto relative md:top-10 relative md:top-10 ' src={image3} alt="" />
+
+                                    <div className="md:ml-46 ml-[250px] relative md:bottom-40 bottom-[200px] flex flex-col gap-3 ">
+                                        <p className='text-[23px] cursor-pointer    '><IoHeartOutline className='   ' /></p>
+                                        <p className='text-[23px] cursor-pointer    '><IoEyeOutline className='   ' /></p>
+                                    </div>
+
+                                    <button className='bg-[#10f577ef] text-white  px-5 py-2 cursor-pointer absolute -bottom-16  left-1/2 -translate-x-1/2  duration-700 ease-in-out group-hover:bottom-0 w-full '>Add To Cart</button>
+                    </div>
+                    <h4 className='mt-4 font-bold truncate '></h4>
+                    <p className='mt-2 font-bold'><span className='text-red-500'>$33 </span>  <span className='text-[#8a8a91] ml-4 line-through'>344 </span> </p>
+                     <p className=' font-bold items-center flex mt-2 '><span className='text-2xl flex text-yellow-400'><IoMdStar /> <IoMdStar /><IoMdStar /><IoMdStar /><IoMdStar /></span> <span className='text-[#8a8a91] ml-5'>(88) </span> </p>
             </div>
 
+
+
+            </div>
+            
         </div>
     </section>
   )

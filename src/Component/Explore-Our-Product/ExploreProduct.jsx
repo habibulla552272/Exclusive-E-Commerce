@@ -8,7 +8,11 @@ import { useQuery } from '@tanstack/react-query';
 import { tanStackData } from '../TanStack/TanStackQuery';
 import { useDispatch } from 'react-redux';
 import { addtoCard } from '../../store/CardSlice';
+
 import { addToWish } from '../../store/wishSlice';
+
+import { Link } from 'react-router-dom';
+
 
 const ExploreProduct = () => {
 
@@ -130,8 +134,8 @@ const addtoCardHandel =(cardData)=>{
                             </div>
                           </div>
       
-                          <div className="h-[165px] pt-8  bg-gray-200">
-                            <p className=" max-h-[50px] overflow-hidden  font-sans  px-4">
+                          <div className="h-[172px] pt-3  bg-gray-200">
+                            <p className=" max-h-[50px] overflow-hidden  font-sans  px-3">
                               {item.title}
                             </p>
                             <div className="flex items-center gap-2 md:gap-4 py-2 px-4 font-sans  font-semibold text-xl">
@@ -139,14 +143,18 @@ const addtoCardHandel =(cardData)=>{
                                 ${item.price - item.discount}
                               </p>
                               <p className="line-through text-gray-400 ">
-                                {item.price}
+                                ${item.price}
                               </p>
                             </div>
                             <p className="text-xl font-semibold font-mono px-4 max-h-[25px] overflow-hidden ">
                               <span className="pr-1 text-orange-400">Model:</span>
                               {item.brand}
                             </p>
+                            <div className='pt-3 '>
+                            <Link to={`/itemdetails/${item.id}`} className='px-4 text-white rounded-xl py-1 mx-4  bg-rose-500 hover:bg-green-400'>Details</Link>
+                            </div>
                           </div>
+                         
                         </div>
                       );
                     })   }
