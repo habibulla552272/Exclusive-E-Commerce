@@ -18,6 +18,8 @@ import Wishlist from "./pages/Wishlist";
 import Card from "./pages/Card";
 import Details from "./pages/Details";
 import Checkout from "./pages/Checkout";
+import Shop from "./pages/Shop";
+
 
 function App() {
   let myRouter = createBrowserRouter(
@@ -31,6 +33,7 @@ function App() {
         <Route path="/card" element={<Card />} />
         <Route path="/itemdetails/:id" element={<Details />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="shop" element={<Shop /> } />
 
 
       </Route>

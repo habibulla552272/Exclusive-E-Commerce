@@ -4,7 +4,7 @@ import { IoCartOutline } from "react-icons/io5";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { ApiData } from '../Contex/ContextApi';
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteWishItem } from '../../store/wishSlice';
+import { deleteWishItem, moveAllWishItems } from '../../store/wishSlice';
 
 const Wishlist4 = () => {
     const mainApiData = useContext(ApiData)
@@ -16,6 +16,12 @@ const Wishlist4 = () => {
     let hendelWishItemDelete = (index) => {
         dispatch (deleteWishItem(index))
     }
+    // wish All items Delete................................
+
+    let hendelWishAllProduct = () => {
+        dispatch (moveAllWishItems())
+        
+    }
    
     
     // let filterWish = mainApi.filter((item) => item.id >= 40 && item.id <= 43)
@@ -25,7 +31,7 @@ const Wishlist4 = () => {
         <section className='container mx-auto mt-14 px-5'>
             <div className="flex justify-between">
                 <p>Wishlist (4) </p>
-                <button className='border py-2 px-5 rounded-sm '>Move All To Bag</button>
+                <button onClick={ hendelWishAllProduct} className='border py-2 px-5 rounded-sm cursor-pointer'>Move All To Bag</button>
             </div>
            <div className="flex flex-wrap justify-between  ">
                 {wishData.map((item) => (
