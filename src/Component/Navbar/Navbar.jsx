@@ -66,7 +66,7 @@ const Navbar = () => {
           <div className="md:flex md:flex-row flex flex-col-reverse md:justify-between w-[75%] ">
 
             {/* Navigation Links */}
-            <ul className={ ` md:flex md:gap-10  py-2 md:static   ${menuShow ? '  ' : ' top-[100px] -left-[200px] absolute  '}`}>
+            <ul className={ ` md:flex md:gap-10  py-2 md:static   ${menuShow ? ' ' : ' top-[100px] -left-[200px] absolute  '}`}>
               <li className="md:hover:border-b">
                 <Link to="/">Home</Link>
               </li>

@@ -7,7 +7,8 @@ import { ApiData } from '../Contex/ContextApi';
 import Slider from "react-slick";
 import  "./Flash.css"
 import { useDispatch } from 'react-redux';
-import { addToWish } from '../../store/WishSlice';
+import { addToWish } from '../../store/wishSlice';
+
 
 
 
