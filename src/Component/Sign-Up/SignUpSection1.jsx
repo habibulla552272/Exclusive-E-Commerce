@@ -83,7 +83,7 @@ const SignUpSection1 = () => {
                     
                 </div>
                 <div className='text-center'>
-                    <p>Already have account ? <Link className='hover:border-b-[1px] hover:text-green-500' >Login</Link> </p>
+                    <p>Already have account ? <Link to='/login' className='hover:border-b-[1px] hover:text-green-500' >Login</Link> </p>
                 </div>
 
 
