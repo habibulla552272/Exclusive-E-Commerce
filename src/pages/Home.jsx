@@ -25,8 +25,7 @@ const Home = () => {
      <Flash/>
       <BestSeleProduct />
       <Music/>
-      <ExploreProduct /> 
-      <ExploreProduct />
+      <ExploreProduct />      
       <NewArrival /> 
       <HomeLastSection />
 

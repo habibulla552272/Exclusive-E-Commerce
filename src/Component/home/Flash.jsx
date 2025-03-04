@@ -7,13 +7,16 @@ import { ApiData } from '../Contex/ContextApi';
 import Slider from "react-slick";
 import  "./Flash.css"
 import { useDispatch } from 'react-redux';
-import { addToWish } from '../../store/WishSlice';
+import { addToWish } from '../../store/wishSlice';
+
 
 
 
 const Flash = () => {
     const data = useContext(ApiData);
     let filterFlash = data.filter((item) => item.id >= 92 && item.id <= 115);
+
+    // see Flash All items..................................
     const [flash, setFlash] = useState(true);
     const hendelFlash = () => {
         setFlash (!flash)
@@ -161,7 +164,7 @@ const Flash = () => {
                 </Slider>
                 <div className="text-center mt-10">
 
-                <button onClick={hendelFlash} className='bg-[#DB4444] text-white py-2 px-5 rounded-xl hover:bg-black'>View All Products</button>
+                <button onClick={hendelFlash} className='bg-[#DB4444] text-white py-2 px-5 rounded-xl hover:bg-black'>Go To Sample Product</button>
                 </div>
 
 
