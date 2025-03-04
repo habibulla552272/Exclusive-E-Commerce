@@ -18,7 +18,11 @@ import Wishlist from "./pages/Wishlist";
 import Card from "./pages/Card";
 import Details from "./pages/Details";
 import Checkout from "./pages/Checkout";
+
 import Shop from "./pages/Shop";
+
+
+import Login from "./pages/Login";
 
 
 function App() {
@@ -28,12 +32,17 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
-        <Route path="/sign-up" element={<Sign />} />
+        <Route path="/signup" element={<Sign />} />
         <Route path="/wishlist" element={<Wishlist /> } />
         <Route path="/card" element={<Card />} />
         <Route path="/itemdetails/:id" element={<Details />} />
         <Route path="/checkout" element={<Checkout />} />
+
         <Route path="/shop" element={<Shop /> } />
+
+        <Route path="/login" element={<Login />} />
+
+
 
 
       </Route>
