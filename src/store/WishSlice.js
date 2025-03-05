@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const wishSlice = createSlice({
+const WishSlice = createSlice({
     name:"wish",
     initialState:{
         wishItemSlice : localStorage.getItem('wish') ? JSON.parse(localStorage.getItem('wish') ) : []
@@ -30,5 +30,5 @@ const wishSlice = createSlice({
     }
 })
 
-export default wishSlice.reducer;
-export const {addToWish, deleteWishItem,moveAllWishItems}= wishSlice.actions;
+export default WishSlice.reducer;
+export const {addToWish, deleteWishItem,moveAllWishItems}= WishSlice.actions;
