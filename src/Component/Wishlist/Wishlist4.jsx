@@ -4,11 +4,12 @@ import { IoCartOutline } from "react-icons/io5";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { ApiData } from '../Contex/ContextApi';
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteWishItem, moveAllWishItems } from '../../store/wishSlice';
+
 import { addformCart } from '../../store/CardSlice';
+import { deleteWishItem, moveAllWishItems } from '../../store/WishSlice';
 
 const Wishlist4 = () => {
-    const mainApiData = useContext(ApiData)
+   
     // add to wish item....................................
     let wishData = useSelector((state) => state.wishSlice.wishItemSlice
     )
@@ -43,7 +44,7 @@ const Wishlist4 = () => {
             <div className="flex flex-wrap justify-between  ">
                 {wishData.map((item) => (
 
-                    <div className=" md:w-[300px] w-full mt-7 relative overflow-hidden group md:ml-0  ">
+                    <div key={item.id} className=" md:w-[300px] w-full mt-7 relative overflow-hidden group md:ml-0  ">
 
                         <div className="border-2 rounded-t-xl  ">
 
