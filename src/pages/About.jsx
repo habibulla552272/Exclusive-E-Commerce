@@ -1,22 +1,11 @@
 import React from "react";
+import AboutSection1 from "../Component/about/AboutSection1";
 
 const About = () => {
   return (
-    <div>
-      <h2 className="text-center font-bold text-2xl text-red-500">About</h2>
-      <p className="indent-8">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-        dicta quas, veritatis porro hic eos vitae molestiae, numquam voluptate
-        omnis aliquam animi, facilis temporibus id consequatur voluptates magni
-        magnam cum?
-      </p>
-      <p className="indent-8">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, iure!
-        Provident, necessitatibus illo repellendus officia maiores similique
-        quasi blanditiis aliquam facilis voluptates ducimus sed earum beatae
-        alias odio. Quam, harum!
-      </p>
-    </div>
+    <>
+     <AboutSection1 />
+    </>
   );
 };
 
