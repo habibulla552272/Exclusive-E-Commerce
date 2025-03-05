@@ -31,7 +31,7 @@ const AboutSection1 = () => {
                 </div>
                 <div className='md:w-[49%] w-[88%] mx-auto'>
                     <img src={SideImage} alt="" />
-                </div>
+                </div> 
             </div>
 
             {/* div2 */}

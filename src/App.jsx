@@ -1,5 +1,3 @@
-
-
 import "./App.css";
 import {
   createBrowserRouter,
@@ -13,16 +11,13 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import About from './pages/About';
 import Sign from './pages/Sign-Up';
-
 import Wishlist from "./pages/Wishlist";
 import Card from "./pages/Card";
 import Details from "./pages/Details";
 import Checkout from "./pages/Checkout";
-
 import Shop from "./pages/Shop";
-
-
 import Login from "./pages/Login";
+import Error from "./pages/Error";
 
 
 function App() {
@@ -41,6 +36,8 @@ function App() {
         <Route path="/shop" element={<Shop /> } />
 
         <Route path="/login" element={<Login />} />
+        <Route path="*" element={<Error />} />
+
 
 
 
