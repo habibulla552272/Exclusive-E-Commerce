@@ -29,8 +29,6 @@ const Home = () => {
       <NewArrival /> 
       <HomeLastSection />
 
-
-
     </div>
   )
 }

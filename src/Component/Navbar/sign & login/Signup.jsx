@@ -1,15 +1,16 @@
 import React from 'react'
 import Sign from './sign-img/sinph.png'
 import Google from './sign-img/google.webp'
+
 const Signup = () => {
   return (
-   <section className='container mx-auto py-10'>
-    <div className="flex gap-16">
-        <div className="w-[50%]">
+   <section className='container mx-auto py-10 md:px-0 px-2'>
+    <div className="md:flex md:gap-16">
+        <div className="md:w-[50%]">
             <img className=' ' src={Sign} alt="" />
         </div>
-        <div className="w-[30%] ">
-            <h2 className='text-3xl font-bold mt-20 text-[#080413d7] '>Create an account</h2>
+        <div className="md:w-[30%] ">
+            <h2 className='text-3xl font-bold md:mt-20 mt-10 text-[#080413d7] '>Create an account</h2>
             <p className='mt-2 font-bold text-[#080413d7]'>Enter your details below</p>
             <div className="flex flex-col">
 
@@ -25,11 +26,12 @@ const Signup = () => {
 
             <div className="flex gap-2 justify-center w-full mt-5">
             <p>Already have account?</p>
-            <button className='underline text-red-900 hover:text-blue-800'>Log in</button>
+            <button className='underline text-red-900 hover:text-green-800'>Log in</button>
 
             </div>
         </div>
     </div>
+    
    </section>
   )
 }
