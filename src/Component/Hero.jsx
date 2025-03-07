@@ -33,16 +33,15 @@ const Hero = () => {
         setCategory(!category)
 
     }
-
-    let womensProduct = data.filter((item) => item.id >= 136 && item.id <= 149)
+   
    
     // Category Product show & category items filter. ........................
     let [categoryProduct, setCategoryProduct] = useState([])
-    const hendelWomansItem = (c) => {
-        let filterProduct =data.filter((item) => item.category == c )
+    const hendelWomansItem = (index) => {
+        let filterProduct =data.filter((item) => item.category == index )
         setCategoryProduct(filterProduct)
     };
-    console.log(categoryProduct);
+    
     
     // Category items show .................................
    let [cat, setCat] = useState([])
@@ -61,9 +60,9 @@ const Hero = () => {
 
     return (
         <section className='border-t md:px-0 px-2 '>
-            <div className=' container mx-auto md:flex justify-between md:flex-row flex flex-col-reverse'>
+            <div className=' container mx-auto md:flex justify-between md:flex-row flex flex-col'>
 
-                <div className="md:w-[29%] md:border-r pt-5 md:mt-0 mt-5 ">
+                <div className="md:w-[29%] md:border-r pt-5  ">
 
                     <div onClick={hendelCategoryItems} className="flex gap-3 items-center cursor-pointer  ">
                         <p className=''><span className='text-2xl font-bold items-center'>#</span> Category Items  </p>
@@ -182,7 +181,7 @@ const Hero = () => {
                                             
                                             <div className="ml-[86%] flex flex-col  absolute mt-3 gap-5 md:text-xl ">
                                                 <p onClick={ ()=> hendeleAddToWish(item)}  className='cursor-pointer group-hover:text-green-500 duration-500'><FaRegHeart /></p>
-                                                <p><RiShoppingCartLine /></p>
+                                                <p className='cursor-pointer '><RiShoppingCartLine /></p>
                                             </div>
                                             <img className='w-full ' src={item.image} alt="" />
 
@@ -198,7 +197,8 @@ const Hero = () => {
                                 })}
                             </div>
                         </div>
-                    
+
+                      
 
                    
                 }
