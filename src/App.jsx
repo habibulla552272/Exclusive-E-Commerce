@@ -18,7 +18,11 @@ import Wishlist from "./pages/Wishlist";
 import Card from "./pages/Card";
 import Details from "./pages/Details";
 import Checkout from "./pages/Checkout";
+
 import Shop from "./pages/Shop";
+
+
+import Login from "./pages/Login";
 
 
 function App() {
@@ -33,7 +37,12 @@ function App() {
         <Route path="/card" element={<Card />} />
         <Route path="/itemdetails/:id" element={<Details />} />
         <Route path="/checkout" element={<Checkout />} />
+
         <Route path="/shop" element={<Shop /> } />
+
+        <Route path="/login" element={<Login />} />
+
+
 
 
       </Route>
