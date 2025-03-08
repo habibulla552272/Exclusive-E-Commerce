@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import Just from './wish-img/bag.png'
+
 import { IoHeartOutline } from "react-icons/io5";
 import { IoEyeOutline } from "react-icons/io5";
 import { IoMdStar } from "react-icons/io";
@@ -35,7 +35,7 @@ const Justwish = () => {
 
         {filterJustItem.map((item) => (
 
-          <div className="mt-10  md:w-[300px] w-full  group  px-2    ">
+          <div key={item.id} className="mt-10  md:w-[300px] w-full  group  px-2    ">
             <div className="bg-[#Ffff] rounded-md shadow-2xl  h-[300px] text-center relative overflow-hidden      border pt-2">
               <div className="flex justify-between px-2 ">
                 <p className=' w-[50px] h-[30px] bg-red-500 text-white rounded-sm ml-2 '>-40%</p>
@@ -64,7 +64,7 @@ const Justwish = () => {
 
       {apiData.map((item) => (
 
-        <div className="mt-10  md:w-[250px] w-[200px] group px-2    ">
+        <div key={item.id} className="mt-10  md:w-[250px] w-[200px] group px-2    ">
           <div className="bg-[#Ffff] rounded-md shadow-2xl  h-[300px] text-center relative overflow-hidden      border pt-2">
             <div className="flex justify-between px-2 ">
               <p className=' w-[50px] h-[30px] bg-red-500 text-white rounded-sm ml-2 '>-40%</p>

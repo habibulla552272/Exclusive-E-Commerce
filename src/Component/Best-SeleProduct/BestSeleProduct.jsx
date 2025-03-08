@@ -3,7 +3,8 @@ import { ApiData } from "../Contex/ContextApi";
 import { CiHeart } from "react-icons/ci";
 import { FaEye } from "react-icons/fa";
 import { useDispatch } from "react-redux";
-import { addToWish } from "../../store/wishSlice";
+import { addToWish } from "../../store/WishSlice";
+
 
 const BestSeleProduct = () => {
   const data = useContext(ApiData);

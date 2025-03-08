@@ -9,9 +9,10 @@ import { tanStackData } from '../TanStack/TanStackQuery';
 import { useDispatch } from 'react-redux';
 import { addtoCard } from '../../store/CardSlice';
 
-import { addToWish } from '../../store/wishSlice';
+
 
 import { Link } from 'react-router-dom';
+import { addToWish } from '../../store/WishSlice';
 
 
 const ExploreProduct = () => {
