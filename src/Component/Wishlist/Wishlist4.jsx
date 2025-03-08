@@ -49,7 +49,7 @@ const Wishlist4 = () => {
 
                             <div className="flex justify-evenly  items-center mt-2 ">
                                 <p className='bg-red-500 text-white w-[50px] px-2 rounded-sm absolute -left-1/2 group-hover:left-4 top-2 duration-700 ease-in-out '>-35% </p>
-                                <p onClick={() => hendelWishItemDelete(item)} className='text-xl cursor-pointer relative left-[110px] '><RiDeleteBinLine /></p>
+                                <p onClick={() => hendelWishItemDelete(item)} className='text-xl cursor-pointer relative left-[110px] border w-[30px] h-[30px] flex justify-center items-center rounded-full bg-[#f5f] text-white hover:bg-red-500 '><RiDeleteBinLine /></p>
                             </div>
                             <img className='md:w-[90%] md:ml-[5%] w-[300px] h-[300px] ' src={item.image} alt="" />
 

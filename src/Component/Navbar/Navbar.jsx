@@ -6,6 +6,7 @@ import { useQuery } from "@tanstack/react-query";
 import { tanStackData } from "../TanStack/TanStackQuery";
 import { MdMenu } from "react-icons/md";
 import { RxCross2 } from "react-icons/rx";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   // Fetching data inside the component
@@ -50,10 +51,20 @@ const Navbar = () => {
   let [menuShow, setMenuShow] = useState(false)
 
   const hendelMenuBar = () => {
-    setMenuShow(!menuShow)       
+    setMenuShow(!menuShow)
   }
+
+  // Wish item notification show........................................
+  let wishItemsNumber = useSelector((state) => state.wishSlice.wishItemSlice)
+  
+  // Cart item notification Number show..............................
+  let cartItemsNumber = useSelector((state) => state.cardSlice.cardItem)
   
   
+  
+    
+
+
 
   return (
     <section >
@@ -66,7 +77,7 @@ const Navbar = () => {
           <div className="md:flex md:flex-row flex flex-col-reverse md:justify-between w-[75%] ">
 
             {/* Navigation Links */}
-            <ul className={ ` md:flex md:gap-10  py-2 md:static   ${menuShow ? ' ' : ' top-[100px] -left-[200px] absolute  '}`}>
+            <ul className={` md:flex md:gap-10  py-2 md:static   ${menuShow ? ' ' : ' top-[100px] -left-[200px] absolute  '}`}>
               <li className="md:hover:border-b">
                 <Link to="/">Home</Link>
               </li>
@@ -100,48 +111,54 @@ const Navbar = () => {
 
               {/* Icons */}
               <div className="flex py-2 gap-5 text-[22px]">
-                <Link to=''>
-                <button aria-label="Wishlist">
-                  <Link to="/wishlist" >
-                  <AiOutlineHeart />
-                  </Link>
-                </button>
-                
+                <Link to="/wishlist" >
+                  <div className="relative cursor-pointer ">
+                    <button aria-label="Wishlist " className="cursor-pointer ">
+                      <AiOutlineHeart />
+                    </button>
+                    <p className=" border rounded-full bg-red-500 text-white text-[14px] absolute bottom-[20px] md:w-[23px] md:h-[23px] w-[20px] h-[20px] left-[12px] flex justify-center items-center ">{wishItemsNumber.length} </p>
+                  </div>
                 </Link>
+
+
                 <Link to="/card">
-                <button aria-label="Cart">
-                  <AiOutlineShoppingCart />
-                </button>
+                  <div className="relative cursor-pointer">
+                    <button aria-label="Cart">
+                      <AiOutlineShoppingCart />
+                    </button>
+                    <p className=" border rounded-full bg-red-500 text-white text-[14px] absolute bottom-[20px] md:w-[23px] md:h-[23px] w-[20px] h-[20px]  left-[12px] flex justify-center items-center ">{cartItemsNumber.length} </p>
+                  </div>
                 </Link>
+
               </div>
 
               <div className="">
-                <p onClick={ hendelMenuBar} className="md:hidden text-2xl  "> {menuShow === true ? <RxCross2 />: <MdMenu />} </p>
+                <p onClick={hendelMenuBar} className="md:hidden text-2xl  "> {menuShow === true ? <RxCross2 /> : <MdMenu />} </p>
               </div>
 
-                {/* Show search results */}
+              {/* Show search results */}
               <div className=" ">
 
-              {searchData.length > 0 && (
-                <div className=" right-0 w-[230px] md:w-[369px] md: bg-white shadow-md rounded-md z-50 h-72 overflow-y-scroll overflow-hidden absolute top-12">
-                  {searchData.map((item) => (
-                    <div
-                      key={item.id}
-                      className="flex items-center gap-3 border-b p-2 h-36 overflow-hidden hover:bg-gray-100"
-                    >
-                      <img
-                        src={item.image || "https://via.placeholder.com/50"}
-                        alt={item.title}
-                        className="w-[33%]  object-cover rounded  h-full "
-                      />
-                      <div className="flex w-[70%] gap-2 items-center justify-center">
-                        <h3 className="text-sm font-semibold max-w-[70%] h-32 overflow-hidden flex items-center justify-center">{item.title}</h3>
-                        <p className="text-xs text-gray-600 w-[30%]">${item.price}</p>
+                {searchData.length > 0 && (
+                  <div className=" right-0 w-[230px] md:w-[369px] md: bg-white shadow-md rounded-md z-50 h-72 overflow-y-scroll overflow-hidden absolute top-12">
+                    {searchData.map((item) => (
+                      <div
+                        key={item.id}
+                        className="flex items-center gap-3 border-b p-2 h-36 overflow-hidden hover:bg-gray-100"
+                      >
+                        <img
+                          src={item.image || "https://via.placeholder.com/50"}
+                          alt={item.title}
+                          className="w-[33%]  object-cover rounded  h-full "
+                        />
+                        <div className="flex w-[70%] gap-2 items-center justify-center">
+                          <h3 className="text-sm font-semibold max-w-[70%] h-32 overflow-hidden flex items-center justify-center">{item.title}</h3>
+                          <p className="text-xs text-gray-600 w-[30%]">${item.price}</p>
+                        </div>
                       </div>
-                    </div>
-                  ))}
-                </div>
-              )}
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           </div>
