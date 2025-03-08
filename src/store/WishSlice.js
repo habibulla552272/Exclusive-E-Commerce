@@ -23,7 +23,7 @@ const WishSlice = createSlice({
 
         },
 
-        moveAllWishItems:(state, action) => {
+        moveAllWishItems:(state) => {
             state.wishItemSlice = [];
             localStorage.setItem('wish', JSON.stringify(state.wishItemSlice))
         }
