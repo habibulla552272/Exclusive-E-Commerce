@@ -10,6 +10,7 @@ import firebaseConfig from "./firebase.config.js";
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Provider } from "react-redux";
 import store from "./store/Store.js";
+
 // import firebaseConfig from "./firebase.config.js";
 
 const queryClient =new QueryClient();
