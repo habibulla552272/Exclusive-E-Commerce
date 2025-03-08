@@ -4,13 +4,13 @@ import CardSlice from '../store/CardSlice'
 import WishSlice from '../store/WishSlice'
 
 const store = configureStore({
-    reducer:{
-        cardSlice:  CardSlice,
+    reducer: {
+        cardSlice: CardSlice,
 
         wishSlice: WishSlice,
 
 
-        
+
 
 
     }

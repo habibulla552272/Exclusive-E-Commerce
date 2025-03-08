@@ -13,16 +13,16 @@ import store from "./store/Store.js";
 
 // import firebaseConfig from "./firebase.config.js";
 
-const queryClient =new QueryClient();
+const queryClient = new QueryClient();
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
       <Provider store={store}>
 
-    <ContextApi>
-      <App />
-    </ContextApi>
+        <ContextApi>
+          <App />
+        </ContextApi>
 
       </Provider>
 
