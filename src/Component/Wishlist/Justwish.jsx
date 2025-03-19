@@ -4,8 +4,8 @@ import { IoHeartOutline } from "react-icons/io5";
 import { IoEyeOutline } from "react-icons/io5";
 import { IoMdStar } from "react-icons/io";
 import { ApiData } from '../Contex/ContextApi';
-import { useDispatch } from 'react-redux';
-import { addToCardItems } from '../../store/CardSlice';
+
+
 
 const Justwish = () => {
 
@@ -20,7 +20,7 @@ const Justwish = () => {
     setJustAll(!justAll)
   }
   // Add To cart items.......................................
-  const dispatch = useDispatch()
+  
  
 
   return (
@@ -48,7 +48,7 @@ const Justwish = () => {
               <img className='w-[90%] h-[66%] ml-5  relative  ' src={item.image} alt="" />
 
 
-              <button onClick={() => hendeleAddToCartItem(item) } className='bg-[#f510eaef] text-white  px-5 py-2 cursor-pointer w-full '>Add To Cart</button>
+              <button className='bg-[#f510eaef] text-white  px-5 py-2 cursor-pointer w-full '>Add To Cart</button>
             </div>
             <h4 className='mt-4 font-bold truncate '>{item.title} </h4>
             <p className='mt-2 font-bold'><span className='text-red-500'>${item.price} </span>  <span className='text-[#8a8a91] ml-4 line-through'>344 </span> </p>

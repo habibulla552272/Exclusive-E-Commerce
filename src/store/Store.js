@@ -8,11 +8,6 @@ const store = configureStore({
         cardSlice: CardSlice,
 
         wishSlice: WishSlice,
-
-
-
-
-
     }
 })
 

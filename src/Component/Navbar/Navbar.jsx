@@ -116,7 +116,7 @@ const Navbar = () => {
               </div>
 
               <div className="">
-                <p onClick={ hendelMenuBar} className="md:hidden text-2xl"> {menuShow === true ? <RxCross2 />: <MdMenu />} </p>
+                <p onClick={ hendelMenuBar} className="md:hidden text-2xl  "> {menuShow === true ? <RxCross2 />: <MdMenu />} </p>
               </div>
 
                 {/* Show search results */}

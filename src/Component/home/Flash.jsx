@@ -9,9 +9,6 @@ import  "./Flash.css"
 import { useDispatch } from 'react-redux';
 import { addToWish } from '../../store/WishSlice';
 
-
-
-
 const Flash = () => {
     const data = useContext(ApiData);
     let filterFlash = data.filter((item) => item.id >= 92 && item.id <= 115);
