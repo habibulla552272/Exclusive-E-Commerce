@@ -12,7 +12,7 @@ import { RiShoppingCartLine } from "react-icons/ri";
 import { FaRegHeart } from "react-icons/fa6";
 import { TbCategoryPlus } from "react-icons/tb";
 import { useDispatch } from 'react-redux';
-import { addToWish } from '../store/wishSlice';
+import { addToWish } from '../store/WishSlice';
 
 
 const Hero = () => {
