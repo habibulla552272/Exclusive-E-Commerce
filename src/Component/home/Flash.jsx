@@ -7,7 +7,7 @@ import { ApiData } from '../Contex/ContextApi';
 import Slider from "react-slick";
 import  "./Flash.css"
 import { useDispatch } from 'react-redux';
-import { addToWish } from '../../store/wishSlice';
+import { addToWish } from '../../store/WishSlice';
 
 const Flash = () => {
     const data = useContext(ApiData);
@@ -94,7 +94,7 @@ const Flash = () => {
                     {filterFlash.map(item => {
                         return (
 
-                            <div className="">
+                            <div key={item.id} className="">
 
                             <div className="mt-10  md:w-[250px] w-full  group  px-2 ">
                                 <div className="bg-[#Ffff] p-4 rounded-md shadow-2xl  h-[300px] text-center relative overflow-hidden ">
@@ -135,7 +135,7 @@ const Flash = () => {
                     {data.map(item => {
                         return (
 
-                            <div className="">
+                            <div key={item.id} className="">
 
                             <div className="mt-10  md:w-[250px] w-full  group  px-2 ">
                                 <div className="bg-[#Ffff] p-4 rounded-md shadow-2xl  h-[300px] text-center relative overflow-hidden ">
