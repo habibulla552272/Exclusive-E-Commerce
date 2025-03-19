@@ -72,8 +72,8 @@ const Hero = () => {
 
 
                     <ul className={`flex flex-col gap-4 mt-4 md:h-[280px] h-[100px] overflow-y-auto ${category ? '' : 'top-[100px] -left-[200px] absolute '}`}>
-                        {cat.map((item) => (
-                            <li onClick={() => hendelWomansItem(item) } className='cursor-pointer' >{item} </li>
+                        {cat.map((item, index) => (
+                            <li key={index} onClick={() => hendelWomansItem(item) } className='cursor-pointer' >{item} </li>
                         ))}
                     </ul>
 
@@ -177,7 +177,7 @@ const Hero = () => {
 
                                 {categoryProduct.map(item => {
                                     return (
-                                        <div className=" border rounded-t-md md:w-[230px] w-[150px] py-4 relative  shadow-xl group md:mt-0 mt-4">
+                                        <div key={item.id} className=" border rounded-t-md md:w-[230px] w-[150px] py-4 relative  shadow-xl group md:mt-0 mt-4">
                                             
                                             <div className="ml-[86%] flex flex-col  absolute mt-3 gap-5 md:text-xl ">
                                                 <p onClick={ ()=> hendeleAddToWish(item)}  className='cursor-pointer group-hover:text-green-500 duration-500'><FaRegHeart /></p>
