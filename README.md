@@ -1,8 +1,60 @@
-# React + Vite
+Exclusive E-Commerce Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, fully responsive e-commerce web application built with React.js and modern frontend technologies. The project focuses on performance, scalability, and a smooth user experience.
 
-Currently, two official plugins are available:
+Live Demo:
+https://exclusive-e-commerce-lsil.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Tech Stack
+
+This project is built using the following technologies:
+
+React.js – Frontend library for building user interfaces
+
+Vite – Fast build tool with Hot Module Replacement (HMR)
+
+TanStack Query (React Query) – Data fetching, caching, and server state management
+
+Redux Toolkit – Global state management for:
+
+Order products
+
+Wishlist
+
+Tailwind CSS – Utility-first CSS framework
+
+Firebase – Authentication and backend services
+
+ESLint – Code quality and linting
+
+Features
+
+Product listing and product details
+
+Wishlist functionality
+
+Order and cart management using Redux Toolkit
+
+User authentication with Firebase
+
+Fast performance with Vite and HMR
+
+Fully responsive design for all devices
+
+Clean and reusable UI components using Tailwind CSS
+
+Efficient API handling with TanStack Query
+
+Project Setup
+
+This project is created using the React + Vite template, which provides a minimal and fast development environment.
+
+Available React Plugins
+
+Currently, two official Vite plugins are available:
+
+@vitejs/plugin-react
+Uses Babel for Fast Refresh
+
+@vitejs/plugin-react-swc
+Uses SWC for faster builds and Fast Refresh
